@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Workers front end (pages)
+This is a web app developed with nextJS for the cloudflare general assignment.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Functionalities
+This web app tries to emulate a social media like experience. First we can see all posts published in a nice home page.
+The app also allows us to publish our own posts. At the moment all the posts are published under the same user, due to
+missing the user authentication, which will be targeted in the systems assignment.
+Then together with all this the app also comes with a nice voting system for some added interaction.
+So in summary we can perform all CRUD operations on the posts plus the voting system.
 
-## Available Scripts
+### Features
+- NextJS
+- Tailwind
+- SWR
+- Ky
 
-In the project directory, you can run:
+### NextJS
+NextJS provides our application with some nice features, amongst them I would like to highlight two.
+First it provides our react application with static rendering allowing for better SEO and performance (which in this case is not really noticeable
+but this is a showcase for an assignment so better show off 😂).
+Second it allows us to cache the props provided by the back end again improving performance a little.
 
-### `yarn start`
+### Tailwind
+To make the application look nice, I used tailwind which is becoming one of the standard for web desing. Tailiwind works really well with react
+because it provides with a way of encapsulating all the component logic in the same file wihtout the need to break our heads figuring out how to make
+the styles. It also comes with a lot per default features that make our application look nicer out of the box.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### useSWR
+useSWR is a data fetching library that provides us with react hooks that allow us to do really nice data fetching optimization to provide our app
+with a better feel overall. As a side note it is also developed by the same people as nextJS.
+Basically useSWR allows us to manage and change the frontend data without the need to validate it against the server at first, so it gives the
+application the feel that everything is working instantly while performing all the fetching asynchronously.
+Of course when the web is refreshed all the data is refetched form the server through the getServerSideProps nextJS function.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ky
+ky is basically just a nice looking http request library.
